@@ -6,7 +6,7 @@ Created on Wed Nov 13 11:55:42 2024
 import os
 import exifread
 import pandas as pd
-import file_management as fm
+import idp.file_management as fm
 import database_manipulation as dm
 #NEW_DATA = 'C:/UCF/FSEC/Data/New_Data/Dark_IV/'
 NEW_DATA = 'E:/University of Central Florida/UCF_Photovoltaics_GRP - Documents/Instrument_Data/IR_ICI'

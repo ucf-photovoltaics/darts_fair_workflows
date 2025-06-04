@@ -8,7 +8,7 @@ This function opens each individual mfr file and pulls the metadata values.
 """
 import os
 import pandas as pd
-import file_management as fm
+import idp.file_management as fm
 import database_manipulation as dm
 
 # Location of current database

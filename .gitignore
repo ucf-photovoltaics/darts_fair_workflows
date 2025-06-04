@@ -1,0 +1,6 @@
+__pycache__/
+/__pycache__
+/csv
+*.csv
+el_image_data.csv
+sinton_data.csv
