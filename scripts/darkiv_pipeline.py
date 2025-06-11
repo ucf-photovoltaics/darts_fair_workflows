@@ -7,7 +7,7 @@ Created on Fri Oct 18 09:39:36 2024
 
 import os
 import pandas as pd
-import file_management as fm
+import idp.file_management as fm
 import database_manipulation as dm
 
 

@@ -8,7 +8,7 @@ import numpy.polynomial.polynomial as poly
 import os
 from os.path import basename
 import sys
-import file_management as fmgmt
+import idp.file_management as fmgmt
 # -----------------------Define functions used in the code-----------------------
 
 
