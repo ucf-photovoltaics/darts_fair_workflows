@@ -1,0 +1,24 @@
+[2025-06-04T15:30:01.575+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_api_call.API_call scheduled__2025-06-04T15:25:00+00:00 [queued]>
+[2025-06-04T15:30:01.587+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_api_call.API_call scheduled__2025-06-04T15:25:00+00:00 [queued]>
+[2025-06-04T15:30:01.588+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2025-06-04T15:30:01.588+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2025-06-04T15:30:01.589+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2025-06-04T15:30:01.609+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): API_call> on 2025-06-04 15:25:00+00:00
+[2025-06-04T15:30:01.615+0000] {standard_task_runner.py:55} INFO - Started process 1569 to run task
+[2025-06-04T15:30:01.618+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'test_api_call', 'API_call', 'scheduled__2025-06-04T15:25:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/API_calls/API_Call_Store_DAG.py', '--cfg-path', '/tmp/tmpm7oz1ag7']
+[2025-06-04T15:30:01.619+0000] {standard_task_runner.py:83} INFO - Job 7: Subtask API_call
+[2025-06-04T15:30:01.713+0000] {task_command.py:389} INFO - Running <TaskInstance: test_api_call.API_call scheduled__2025-06-04T15:25:00+00:00 [running]> on host 71d4fc1857f2
+[2025-06-04T15:30:01.837+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test_api_call
+AIRFLOW_CTX_TASK_ID=API_call
+AIRFLOW_CTX_EXECUTION_DATE=2025-06-04T15:25:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-06-04T15:25:00+00:00
+[2025-06-04T15:30:01.838+0000] {logging_mixin.py:137} INFO - this is an API call
+[2025-06-04T15:30:01.838+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-06-04T15:30:01.849+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=test_api_call, task_id=API_call, execution_date=20250604T152500, start_date=20250604T153001, end_date=20250604T153001
+[2025-06-04T15:30:01.870+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2025-06-04T15:30:01.889+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,1182 @@
+[2025-06-04T18:55:02.424+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: test_api_call.API_call scheduled__2025-06-04T18:50:00+00:00 [queued]>
+[2025-06-04T18:55:02.452+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: test_api_call.API_call scheduled__2025-06-04T18:50:00+00:00 [queued]>
+[2025-06-04T18:55:02.454+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-06-04T18:55:02.456+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-06-04T18:55:02.456+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-06-04T18:55:02.491+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): API_call> on 2025-06-04 18:50:00+00:00
+[2025-06-04T18:55:02.510+0000] {standard_task_runner.py:55} INFO - Started process 310 to run task
+[2025-06-04T18:55:02.516+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'test_api_call', 'API_call', 'scheduled__2025-06-04T18:50:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/API_calls/API_Call_Store_DAG.py', '--cfg-path', '/tmp/tmpijrh5ndw']
+[2025-06-04T18:55:02.524+0000] {standard_task_runner.py:83} INFO - Job 5: Subtask API_call
+[2025-06-04T18:55:02.636+0000] {task_command.py:388} INFO - Running <TaskInstance: test_api_call.API_call scheduled__2025-06-04T18:50:00+00:00 [running]> on host 1e18d6eba7d7
+[2025-06-04T18:55:02.726+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test_api_call
+AIRFLOW_CTX_TASK_ID=API_call
+AIRFLOW_CTX_EXECUTION_DATE=2025-06-04T18:50:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-06-04T18:50:00+00:00
+[2025-06-04T18:55:02.727+0000] {logging_mixin.py:137} INFO - get_wait_times
+[2025-06-04T18:55:03.078+0000] {logging_mixin.py:137} INFO - status code:  200
+[2025-06-04T18:55:03.079+0000] {logging_mixin.py:137} INFO - json text
+[2025-06-04T18:55:03.080+0000] {logging_mixin.py:137} INFO - json Objects
+[2025-06-04T18:55:03.080+0000] {logging_mixin.py:137} INFO - 
+ID: 1184 
+Park: Magic Kingdom 
+Land: Adventureland 
+Ride: A Pirate's Adventure ~ Treasures of the Seven Seas 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.080+0000] {logging_mixin.py:137} INFO - 
+ID: 134 
+Park: Magic Kingdom 
+Land: Adventureland 
+Ride: Jungle Cruise 
+Is open: True 
+Wait Time: 35 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.081+0000] {logging_mixin.py:137} INFO - 
+ID: 137 
+Park: Magic Kingdom 
+Land: Adventureland 
+Ride: Pirates of the Caribbean 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.081+0000] {logging_mixin.py:137} INFO - 
+ID: 355 
+Park: Magic Kingdom 
+Land: Adventureland 
+Ride: Swiss Family Treehouse 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.081+0000] {logging_mixin.py:137} INFO - 
+ID: 141 
+Park: Magic Kingdom 
+Land: Adventureland 
+Ride: The Magic Carpets of Aladdin 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.081+0000] {logging_mixin.py:137} INFO - 
+ID: 334 
+Park: Magic Kingdom 
+Land: Adventureland 
+Ride: Walt Disney's Enchanted Tiki Room 
+Is open: True 
+Wait Time: 15 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.082+0000] {logging_mixin.py:137} INFO - 
+ID: 133 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: "it's a small world" 
+Is open: True 
+Wait Time: 40 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.082+0000] {logging_mixin.py:137} INFO - 
+ID: 13764 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Casey Jr. Splash 'N' Soak Station 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.082+0000] {logging_mixin.py:137} INFO - 
+ID: 13763 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Cinderella Castle 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.082+0000] {logging_mixin.py:137} INFO - 
+ID: 132 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Dumbo the Flying Elephant 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.083+0000] {logging_mixin.py:137} INFO - 
+ID: 128 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Enchanted Tales with Belle 
+Is open: True 
+Wait Time: 25 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.083+0000] {logging_mixin.py:137} INFO - 
+ID: 135 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Mad Tea Party 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.084+0000] {logging_mixin.py:137} INFO - 
+ID: 147 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Meet Ariel at Her Grotto 
+Is open: True 
+Wait Time: 25 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.084+0000] {logging_mixin.py:137} INFO - 
+ID: 6700 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Meet Cinderella and a Visiting Princess at Princess Fairytale Hall 
+Is open: True 
+Wait Time: 35 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.084+0000] {logging_mixin.py:137} INFO - 
+ID: 144 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Meet Daring Disney Pals as Circus Stars at Pete's Silly Sideshow 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.084+0000] {logging_mixin.py:137} INFO - 
+ID: 145 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Meet Dashing Disney Pals as Circus Stars at Pete's Silly Sideshow 
+Is open: True 
+Wait Time: 35 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.084+0000] {logging_mixin.py:137} INFO - 
+ID: 6699 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Meet Princess Tiana and a Visiting Princess at Princess Fairytale Hall 
+Is open: True 
+Wait Time: 25 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.085+0000] {logging_mixin.py:137} INFO - 
+ID: 171 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Mickey's PhilharMagic 
+Is open: True 
+Wait Time: 15 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.085+0000] {logging_mixin.py:137} INFO - 
+ID: 136 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Peter Pan's Flight 
+Is open: True 
+Wait Time: 50 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.085+0000] {logging_mixin.py:137} INFO - 
+ID: 161 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Prince Charming Regal Carrousel 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.086+0000] {logging_mixin.py:137} INFO - 
+ID: 129 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Seven Dwarfs Mine Train 
+Is open: True 
+Wait Time: 65 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.086+0000] {logging_mixin.py:137} INFO - 
+ID: 126 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: The Barnstormer 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.086+0000] {logging_mixin.py:137} INFO - 
+ID: 142 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: The Many Adventures of Winnie the Pooh 
+Is open: True 
+Wait Time: 40 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.086+0000] {logging_mixin.py:137} INFO - 
+ID: 127 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Under the Sea - Journey of The Little Mermaid 
+Is open: True 
+Wait Time: 15 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.087+0000] {logging_mixin.py:137} INFO - 
+ID: 1181 
+Park: Magic Kingdom 
+Land: Fantasyland 
+Ride: Walt Disney World Railroad - Fantasyland 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.087+0000] {logging_mixin.py:137} INFO - 
+ID: 130 
+Park: Magic Kingdom 
+Land: Frontierland 
+Ride: Big Thunder Mountain Railroad 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.087+0000] {logging_mixin.py:137} INFO - 
+ID: 1214 
+Park: Magic Kingdom 
+Land: Frontierland 
+Ride: Country Bear Musical Jamboree 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.087+0000] {logging_mixin.py:137} INFO - 
+ID: 13630 
+Park: Magic Kingdom 
+Land: Frontierland 
+Ride: Tiana's Bayou Adventure 
+Is open: True 
+Wait Time: 45 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.087+0000] {logging_mixin.py:137} INFO - 
+ID: 465 
+Park: Magic Kingdom 
+Land: Frontierland 
+Ride: Tom Sawyer Island 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.088+0000] {logging_mixin.py:137} INFO - 
+ID: 1179 
+Park: Magic Kingdom 
+Land: Frontierland 
+Ride: Walt Disney World Railroad - Frontierland 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.088+0000] {logging_mixin.py:137} INFO - 
+ID: 140 
+Park: Magic Kingdom 
+Land: Liberty Square 
+Ride: Haunted Mansion 
+Is open: True 
+Wait Time: 50 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.089+0000] {logging_mixin.py:137} INFO - 
+ID: 1187 
+Park: Magic Kingdom 
+Land: Liberty Square 
+Ride: Liberty Square Riverboat 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.089+0000] {logging_mixin.py:137} INFO - 
+ID: 356 
+Park: Magic Kingdom 
+Land: Liberty Square 
+Ride: The Hall of Presidents 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.089+0000] {logging_mixin.py:137} INFO - 
+ID: 1188 
+Park: Magic Kingdom 
+Land: Main Street, U.S.A. 
+Ride: Main Street Vehicles 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.089+0000] {logging_mixin.py:137} INFO - 
+ID: 146 
+Park: Magic Kingdom 
+Land: Main Street, U.S.A. 
+Ride: Meet Mickey at Town Square Theater 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.089+0000] {logging_mixin.py:137} INFO - 
+ID: 1189 
+Park: Magic Kingdom 
+Land: Main Street, U.S.A. 
+Ride: Walt Disney World Railroad - Main Street, U.S.A. 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.090+0000] {logging_mixin.py:137} INFO - 
+ID: 248 
+Park: Magic Kingdom 
+Land: Tomorrowland 
+Ride: Astro Orbiter 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.090+0000] {logging_mixin.py:137} INFO - 
+ID: 131 
+Park: Magic Kingdom 
+Land: Tomorrowland 
+Ride: Buzz Lightyear's Space Ranger Spin 
+Is open: True 
+Wait Time: 30 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.090+0000] {logging_mixin.py:137} INFO - 
+ID: 125 
+Park: Magic Kingdom 
+Land: Tomorrowland 
+Ride: Monsters Inc. Laugh Floor 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.090+0000] {logging_mixin.py:137} INFO - 
+ID: 138 
+Park: Magic Kingdom 
+Land: Tomorrowland 
+Ride: Space Mountain 
+Is open: True 
+Wait Time: 50 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.091+0000] {logging_mixin.py:137} INFO - 
+ID: 143 
+Park: Magic Kingdom 
+Land: Tomorrowland 
+Ride: Tomorrowland Speedway 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.091+0000] {logging_mixin.py:137} INFO - 
+ID: 1190 
+Park: Magic Kingdom 
+Land: Tomorrowland 
+Ride: Tomorrowland Transit Authority PeopleMover 
+Is open: True 
+Wait Time: 15 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.091+0000] {logging_mixin.py:137} INFO - 
+ID: 11527 
+Park: Magic Kingdom 
+Land: Tomorrowland 
+Ride: TRON Lightcycle / Run 
+Is open: True 
+Wait Time: 105 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.091+0000] {logging_mixin.py:137} INFO - 
+ID: 457 
+Park: Magic Kingdom 
+Land: Tomorrowland 
+Ride: Walt Disney's Carousel of Progress 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:36.000Z
+[2025-06-04T18:55:03.091+0000] {logging_mixin.py:137} INFO - get_wait_times
+[2025-06-04T18:55:03.341+0000] {logging_mixin.py:137} INFO - status code:  200
+[2025-06-04T18:55:03.342+0000] {logging_mixin.py:137} INFO - json text
+[2025-06-04T18:55:03.343+0000] {logging_mixin.py:137} INFO - json Objects
+[2025-06-04T18:55:03.343+0000] {logging_mixin.py:137} INFO - 
+ID: 13773 
+Park: EPCOT 
+Land: American Adventure Pavilion 
+Ride: American Heritage Gallery 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.343+0000] {logging_mixin.py:137} INFO - 
+ID: 13778 
+Park: EPCOT 
+Land: American Adventure Pavilion 
+Ride: Kidcot Fun Stops 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.344+0000] {logging_mixin.py:137} INFO - 
+ID: 13779 
+Park: EPCOT 
+Land: France Pavilion 
+Ride: Palais du Cinéma 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.344+0000] {logging_mixin.py:137} INFO - 
+ID: 13777 
+Park: EPCOT 
+Land: Imagination Pavilion 
+Ride: ImageWorks - The "What If" Labs 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.344+0000] {logging_mixin.py:137} INFO - 
+ID: 13781 
+Park: EPCOT 
+Land: Japan Pavilion 
+Ride: Bijutsu-kan Gallery 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.345+0000] {logging_mixin.py:137} INFO - 
+ID: 2495 
+Park: EPCOT 
+Land: World Celebration 
+Ride: Disney and Pixar Short Film Festival 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.345+0000] {logging_mixin.py:137} INFO - 
+ID: 155 
+Park: EPCOT 
+Land: World Celebration 
+Ride: Journey Into Imagination With Figment 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.345+0000] {logging_mixin.py:137} INFO - 
+ID: 13627 
+Park: EPCOT 
+Land: World Celebration 
+Ride: Meet Beloved Disney Pals at Mickey & Friends 
+Is open: True 
+Wait Time: 20 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.346+0000] {logging_mixin.py:137} INFO - 
+ID: 13775 
+Park: EPCOT 
+Land: World Celebration 
+Ride: Project Tomorrow: Inventing the Wonders of the Future 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.346+0000] {logging_mixin.py:137} INFO - 
+ID: 159 
+Park: EPCOT 
+Land: World Celebration 
+Ride: Spaceship Earth 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.346+0000] {logging_mixin.py:137} INFO - 
+ID: 13774 
+Park: EPCOT 
+Land: World Discovery 
+Ride: Advanced Training Lab 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.347+0000] {logging_mixin.py:137} INFO - 
+ID: 10916 
+Park: EPCOT 
+Land: World Discovery 
+Ride: Guardians of the Galaxy: Cosmic Rewind 
+Is open: True 
+Wait Time: 75 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.348+0000] {logging_mixin.py:137} INFO - 
+ID: 158 
+Park: EPCOT 
+Land: World Discovery 
+Ride: Mission: SPACE 
+Is open: True 
+Wait Time: 15 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.348+0000] {logging_mixin.py:137} INFO - 
+ID: 160 
+Park: EPCOT 
+Land: World Discovery 
+Ride: Test Track 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.348+0000] {logging_mixin.py:137} INFO - 
+ID: 7323 
+Park: EPCOT 
+Land: World Nature 
+Ride: Awesome Planet 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.349+0000] {logging_mixin.py:137} INFO - 
+ID: 13770 
+Park: EPCOT 
+Land: World Nature 
+Ride: Bruce's Shark World 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.349+0000] {logging_mixin.py:137} INFO - 
+ID: 12387 
+Park: EPCOT 
+Land: World Nature 
+Ride: Journey of Water, Inspired by Moana 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.350+0000] {logging_mixin.py:137} INFO - 
+ID: 156 
+Park: EPCOT 
+Land: World Nature 
+Ride: Living with the Land 
+Is open: True 
+Wait Time: 20 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.350+0000] {logging_mixin.py:137} INFO - 
+ID: 13782 
+Park: EPCOT 
+Land: World Nature 
+Ride: SeaBase Aquarium 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.350+0000] {logging_mixin.py:137} INFO - 
+ID: 151 
+Park: EPCOT 
+Land: World Nature 
+Ride: Soarin' Around the World 
+Is open: True 
+Wait Time: 20 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.350+0000] {logging_mixin.py:137} INFO - 
+ID: 153 
+Park: EPCOT 
+Land: World Nature 
+Ride: The Seas with Nemo & Friends 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.351+0000] {logging_mixin.py:137} INFO - 
+ID: 152 
+Park: EPCOT 
+Land: World Nature 
+Ride: Turtle Talk With Crush 
+Is open: True 
+Wait Time: 15 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.351+0000] {logging_mixin.py:137} INFO - 
+ID: 829 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Canada Far and Wide in Circle-Vision 360 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.351+0000] {logging_mixin.py:137} INFO - 
+ID: 2679 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Frozen Ever After 
+Is open: True 
+Wait Time: 65 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.352+0000] {logging_mixin.py:137} INFO - 
+ID: 13772 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Gallery of Arts and History 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.352+0000] {logging_mixin.py:137} INFO - 
+ID: 466 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Gran Fiesta Tour Starring The Three Caballeros 
+Is open: True 
+Wait Time: 5 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.353+0000] {logging_mixin.py:137} INFO - 
+ID: 13767 
+Park: EPCOT 
+Land: World Showcase 
+Ride: House of the Whispering Willows 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.353+0000] {logging_mixin.py:137} INFO - 
+ID: 6701 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Meet Anna and Elsa at Royal Sommerhus 
+Is open: True 
+Wait Time: 40 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.354+0000] {logging_mixin.py:137} INFO - 
+ID: 13780 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Mexico Folk Art Gallery 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.355+0000] {logging_mixin.py:137} INFO - 
+ID: 10914 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Remy's Ratatouille Adventure 
+Is open: True 
+Wait Time: 55 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.355+0000] {logging_mixin.py:137} INFO - 
+ID: 10915 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Remy's Ratatouille Adventure Single Rider 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.356+0000] {logging_mixin.py:137} INFO - 
+ID: 13776 
+Park: EPCOT 
+Land: World Showcase 
+Ride: Stave Church Gallery 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:19.000Z
+[2025-06-04T18:55:03.356+0000] {logging_mixin.py:137} INFO - get_wait_times
+[2025-06-04T18:55:03.702+0000] {logging_mixin.py:137} INFO - status code:  200
+[2025-06-04T18:55:03.704+0000] {logging_mixin.py:137} INFO - json text
+[2025-06-04T18:55:03.706+0000] {logging_mixin.py:137} INFO - json Objects
+[2025-06-04T18:55:03.706+0000] {logging_mixin.py:137} INFO - 
+ID: 12430 
+Park: Hollywood Studios 
+Land: Animation Courtyard 
+Ride: Meet Ariel at Walt Disney Presents 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.708+0000] {logging_mixin.py:137} INFO - 
+ID: 2478 
+Park: Hollywood Studios 
+Land: Animation Courtyard 
+Ride: Star Wars Launch Bay 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.711+0000] {logging_mixin.py:137} INFO - 
+ID: 2663 
+Park: Hollywood Studios 
+Land: Animation Courtyard 
+Ride: Star Wars Launch Bay Theater 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.721+0000] {logging_mixin.py:137} INFO - 
+ID: 6705 
+Park: Hollywood Studios 
+Land: Animation Courtyard 
+Ride: Star Wars Launch Bay: BB-8 Astromech on Duty 
+Is open: True 
+Wait Time: 20 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.723+0000] {logging_mixin.py:137} INFO - 
+ID: 2574 
+Park: Hollywood Studios 
+Land: Animation Courtyard 
+Ride: Star Wars Launch Bay: Encounter Darth Vader 
+Is open: True 
+Wait Time: 55 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.724+0000] {logging_mixin.py:137} INFO - 
+ID: 2577 
+Park: Hollywood Studios 
+Land: Animation Courtyard 
+Ride: Star Wars Launch Bay: Meet Chewbacca 
+Is open: True 
+Wait Time: 40 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.724+0000] {logging_mixin.py:137} INFO - 
+ID: 5145 
+Park: Hollywood Studios 
+Land: Animation Courtyard 
+Ride: Walt Disney Presents 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.726+0000] {logging_mixin.py:137} INFO - 
+ID: 6704 
+Park: Hollywood Studios 
+Land: Commissary Lane 
+Ride: Meet Disney Stars at Red Carpet Dreams 
+Is open: True 
+Wait Time: 50 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.727+0000] {logging_mixin.py:137} INFO - 
+ID: 1174 
+Park: Hollywood Studios 
+Land: Echo Lake 
+Ride: For the First Time in Forever: A Frozen Sing-Along Celebration 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.728+0000] {logging_mixin.py:137} INFO - 
+ID: 6702 
+Park: Hollywood Studios 
+Land: Echo Lake 
+Ride: Indiana Jones™ Epic Stunt Spectacular! 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.728+0000] {logging_mixin.py:137} INFO - 
+ID: 6703 
+Park: Hollywood Studios 
+Land: Echo Lake 
+Ride: Meet Olaf at Celebrity Spotlight 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.730+0000] {logging_mixin.py:137} INFO - 
+ID: 120 
+Park: Hollywood Studios 
+Land: Echo Lake 
+Ride: Star Tours – The Adventures Continue 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.731+0000] {logging_mixin.py:137} INFO - 
+ID: 7333 
+Park: Hollywood Studios 
+Land: Echo Lake 
+Ride: Vacation Fun - An Original Animated Short with Mickey & Minnie 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.735+0000] {logging_mixin.py:137} INFO - 
+ID: 6361 
+Park: Hollywood Studios 
+Land: Hollywood Boulevard 
+Ride: Mickey & Minnie's Runaway Railway 
+Is open: True 
+Wait Time: 60 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.743+0000] {logging_mixin.py:137} INFO - 
+ID: 118 
+Park: Hollywood Studios 
+Land: Muppet Courtyard 
+Ride: Muppet*Vision 3D 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.744+0000] {logging_mixin.py:137} INFO - 
+ID: 12425 
+Park: Hollywood Studios 
+Land: Pixar Plaza 
+Ride: Meet Edna Mode at the Edna Mode Experience 
+Is open: True 
+Wait Time: 15 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.744+0000] {logging_mixin.py:137} INFO - 
+ID: 117 
+Park: Hollywood Studios 
+Land: Pixar Plaza 
+Ride: Toy Story Mania! 
+Is open: True 
+Wait Time: 45 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.745+0000] {logging_mixin.py:137} INFO - 
+ID: 6368 
+Park: Hollywood Studios 
+Land: Star Wars: Galaxy's Edge 
+Ride: Millennium Falcon: Smugglers Run 
+Is open: True 
+Wait Time: 60 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.745+0000] {logging_mixin.py:137} INFO - 
+ID: 10902 
+Park: Hollywood Studios 
+Land: Star Wars: Galaxy's Edge 
+Ride: Millennium Falcon: Smugglers Run Single Rider 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.745+0000] {logging_mixin.py:137} INFO - 
+ID: 6369 
+Park: Hollywood Studios 
+Land: Star Wars: Galaxy's Edge 
+Ride: Star Wars: Rise of the Resistance 
+Is open: True 
+Wait Time: 55 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.746+0000] {logging_mixin.py:137} INFO - 
+ID: 14531 
+Park: Hollywood Studios 
+Land: Star Wars: Galaxy's Edge 
+Ride: Star Wars: Rise of the Resistance Single Rider 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.748+0000] {logging_mixin.py:137} INFO - 
+ID: 1176 
+Park: Hollywood Studios 
+Land: Sunset Boulevard 
+Ride: Beauty and the Beast – Live on Stage 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.748+0000] {logging_mixin.py:137} INFO - 
+ID: 119 
+Park: Hollywood Studios 
+Land: Sunset Boulevard 
+Ride: Rock 'n' Roller Coaster Starring Aerosmith 
+Is open: True 
+Wait Time: 55 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.749+0000] {logging_mixin.py:137} INFO - 
+ID: 10901 
+Park: Hollywood Studios 
+Land: Sunset Boulevard 
+Ride: Rock 'n' Roller Coaster Starring Aerosmith Single Rider 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.750+0000] {logging_mixin.py:137} INFO - 
+ID: 123 
+Park: Hollywood Studios 
+Land: Sunset Boulevard 
+Ride: The Twilight Zone Tower of Terror™ 
+Is open: True 
+Wait Time: 45 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.751+0000] {logging_mixin.py:137} INFO - 
+ID: 5477 
+Park: Hollywood Studios 
+Land: Toy Story Land 
+Ride: Alien Swirling Saucers 
+Is open: True 
+Wait Time: 35 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.752+0000] {logging_mixin.py:137} INFO - 
+ID: 5476 
+Park: Hollywood Studios 
+Land: Toy Story Land 
+Ride: Slinky Dog Dash 
+Is open: True 
+Wait Time: 40 
+Updated: 2025-06-04T18:50:46.000Z
+[2025-06-04T18:55:03.754+0000] {logging_mixin.py:137} INFO - get_wait_times
+[2025-06-04T18:55:04.028+0000] {logging_mixin.py:137} INFO - status code:  200
+[2025-06-04T18:55:04.030+0000] {logging_mixin.py:137} INFO - json text
+[2025-06-04T18:55:04.030+0000] {logging_mixin.py:137} INFO - json Objects
+[2025-06-04T18:55:04.031+0000] {logging_mixin.py:137} INFO - 
+ID: 657 
+Park: Animal Kingdom 
+Land: Africa 
+Ride: Festival of the Lion King 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.031+0000] {logging_mixin.py:137} INFO - 
+ID: 651 
+Park: Animal Kingdom 
+Land: Africa 
+Ride: Gorilla Falls Exploration Trail 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.032+0000] {logging_mixin.py:137} INFO - 
+ID: 113 
+Park: Animal Kingdom 
+Land: Africa 
+Ride: Kilimanjaro Safaris 
+Is open: True 
+Wait Time: 10 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.034+0000] {logging_mixin.py:137} INFO - 
+ID: 655 
+Park: Animal Kingdom 
+Land: Africa 
+Ride: Wildlife Express Train 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.035+0000] {logging_mixin.py:137} INFO - 
+ID: 110 
+Park: Animal Kingdom 
+Land: Asia 
+Ride: Expedition Everest - Legend of the Forbidden Mountain 
+Is open: True 
+Wait Time: 40 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.036+0000] {logging_mixin.py:137} INFO - 
+ID: 14533 
+Park: Animal Kingdom 
+Land: Asia 
+Ride: Expedition Everest - Legend of the Forbidden Mountain Single Rider 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.036+0000] {logging_mixin.py:137} INFO - 
+ID: 10921 
+Park: Animal Kingdom 
+Land: Asia 
+Ride: Feathered Friends in Flight! 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.036+0000] {logging_mixin.py:137} INFO - 
+ID: 112 
+Park: Animal Kingdom 
+Land: Asia 
+Ride: Kali River Rapids 
+Is open: False 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.037+0000] {logging_mixin.py:137} INFO - 
+ID: 13809 
+Park: Animal Kingdom 
+Land: Dinoland U.S.A 
+Ride: Dino-Sue 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.037+0000] {logging_mixin.py:137} INFO - 
+ID: 111 
+Park: Animal Kingdom 
+Land: Dinoland U.S.A 
+Ride: DINOSAUR 
+Is open: True 
+Wait Time: 40 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.037+0000] {logging_mixin.py:137} INFO - 
+ID: 10920 
+Park: Animal Kingdom 
+Land: Dinoland U.S.A 
+Ride: Finding Nemo: The Big Blue... and Beyond! 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.038+0000] {logging_mixin.py:137} INFO - 
+ID: 652 
+Park: Animal Kingdom 
+Land: Dinoland U.S.A 
+Ride: The Boneyard 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.038+0000] {logging_mixin.py:137} INFO - 
+ID: 13811 
+Park: Animal Kingdom 
+Land: Discovery Island 
+Ride: Discovery Island Trails 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.039+0000] {logging_mixin.py:137} INFO - 
+ID: 116 
+Park: Animal Kingdom 
+Land: Discovery Island 
+Ride: Meet Favorite Disney Pals at Adventurers Outpost 
+Is open: True 
+Wait Time: 20 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.042+0000] {logging_mixin.py:137} INFO - 
+ID: 12451 
+Park: Animal Kingdom 
+Land: Discovery Island 
+Ride: Meet Moana at Character Landing 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.044+0000] {logging_mixin.py:137} INFO - 
+ID: 13751 
+Park: Animal Kingdom 
+Land: Discovery Island 
+Ride: Tree of Life 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.046+0000] {logging_mixin.py:137} INFO - 
+ID: 4439 
+Park: Animal Kingdom 
+Land: Pandora - The World of Avatar 
+Ride: Avatar Flight of Passage 
+Is open: True 
+Wait Time: 50 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.048+0000] {logging_mixin.py:137} INFO - 
+ID: 4438 
+Park: Animal Kingdom 
+Land: Pandora - The World of Avatar 
+Ride: Na'vi River Journey 
+Is open: True 
+Wait Time: 50 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.049+0000] {logging_mixin.py:137} INFO - 
+ID: 13807 
+Park: Animal Kingdom 
+Land: Rafiki's Planet Watch 
+Ride: Affection Section 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.050+0000] {logging_mixin.py:137} INFO - 
+ID: 13806 
+Park: Animal Kingdom 
+Land: Rafiki's Planet Watch 
+Ride: Conservation Station 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.051+0000] {logging_mixin.py:137} INFO - 
+ID: 6680 
+Park: Animal Kingdom 
+Land: Rafiki's Planet Watch 
+Ride: The Animation Experience at Conservation Station 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.053+0000] {logging_mixin.py:137} INFO - 
+ID: 13812 
+Park: Animal Kingdom 
+Land: The Oasis 
+Ride: The Oasis Exhibits 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.054+0000] {logging_mixin.py:137} INFO - 
+ID: 13808 
+Park: Animal Kingdom 
+Land: The Oasis 
+Ride: Wilderness Explorers 
+Is open: True 
+Wait Time: 0 
+Updated: 2025-06-04T18:51:00.000Z
+[2025-06-04T18:55:04.071+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymysql/connections.py", line 650, in connect
+    (self.host, self.port), self.connect_timeout, **kwargs
+  File "/usr/local/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/usr/local/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/API_calls/seminar_api_test.py", line 92, in main
+    WaitTime.data_to_mysql(df,'wait_times')
+  File "/opt/airflow/dags/API_calls/sqlalchemy_class.py", line 30, in data_to_mysql
+    data.to_sql(table_name,engine,if_exists='append',index=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1758, in to_sql
+    dtype=dtype,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1650, in prep_table
+    table.create()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 856, in create
+    if self.exists():
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 840, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1783, in has_table
+    insp = sa.inspect(self.connectable)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/inspection.py", line 64, in inspect
+    ret = reg(subject)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 182, in _engine_insp
+    return Inspector._construct(Inspector._init_engine, bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 117, in _construct
+    init(self, bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/reflection.py", line 128, in _init_engine
+    engine.connect().close()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3315, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3394, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3365, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2199, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3361, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-06-04T18:55:04.161+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=test_api_call, task_id=API_call, execution_date=20250604T185000, start_date=20250604T185502, end_date=20250604T185504
+[2025-06-04T18:55:04.188+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 5 for task API_call ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 310)
+[2025-06-04T18:55:04.228+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2025-06-04T18:55:04.297+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

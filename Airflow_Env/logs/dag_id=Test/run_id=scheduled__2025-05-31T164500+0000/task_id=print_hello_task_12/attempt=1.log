@@ -1,0 +1,4 @@
+{"timestamp":"2025-05-31T16:48:32.370749","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-31T16:48:32.371560","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/DAG_call_api.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-31T16:48:32.389512","level":"error","event":"Task not found in DAG during start up","dag_id":"Test","task_id":"print_hello_task_12","bundle":"BundleInfo(name='dags-folder', version=None)","path":"DAG_call_api.py","logger":"task"}
+{"timestamp":"2025-05-31T16:48:32.405133Z","level":"warning","event":"Process exited abnormally","exit_code":1,"logger":"task"}
