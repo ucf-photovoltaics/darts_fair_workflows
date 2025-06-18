@@ -9,7 +9,7 @@ import matplotlib as mpl
 from scripts.sqlite_operations import SQLiteDB
 from .instrument_data_parser_plotter import InstrumentDataParserPlotter
 
-class IDPOutputer:
+class InstrumentDataParserOutputer:
     def __init__(self, output_dir=None):
         # Initialize storage for DataFrames
         self.dataframes = {

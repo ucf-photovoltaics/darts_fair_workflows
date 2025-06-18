@@ -1,6 +1,6 @@
 import os
 from idp.instrument_data_parser_oo import InstrumentDataParser
-from idp.instrument_data_parser_outputer import IDPOutputer
+from idp.instrument_data_parser_outputer import InstrumentDataParserOutputer
 import pandas as pd
 
 def main():
@@ -33,7 +33,7 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
     
     # Create outputer instance with the output directory
-    outputer = IDPOutputer(output_dir)
+    outputer = InstrumentDataParserOutputer(output_dir)
     
     # Process image metadata
     if image_metadata:
