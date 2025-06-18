@@ -1,0 +1,18 @@
+direction: down
+
+InstrumentDataParser: "InstrumentDataParser"
+InstrumentDataParserPlotter: "InstrumentDataParserPlotter"
+InstrumentDataParserOutputer: "InstrumentDataParserOutputer"
+SQLiteDB: "SQLiteDB (from scripts/sqlite_operations.py)"
+Plots: "Output/Plots"
+Database: "SQLite Database"
+
+InstrumentDataParser: {
+  RawData
+}
+
+InstrumentDataParser -> InstrumentDataParserOutputer: "metadata, DataFrames"
+InstrumentDataParserOutputer -> InstrumentDataParserPlotter: "delegates plotting"
+InstrumentDataParserOutputer -> SQLiteDB: "delegates DB operations"
+InstrumentDataParserPlotter -> Plots: "visualizations"
+SQLiteDB -> Database: "SQL operations"
