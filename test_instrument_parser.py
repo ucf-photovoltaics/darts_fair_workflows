@@ -1,6 +1,6 @@
 import os
 from idp.instrument_data_parser_oo import InstrumentDataParser
-from idp.idp_outputer import IDPOutputer
+from idp.instrument_data_parser_outputer import IDPOutputer
 import pandas as pd
 
 def main():

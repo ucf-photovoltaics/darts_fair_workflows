@@ -6,7 +6,7 @@ from datetime import datetime
 import numpy as np
 import time
 import matplotlib as mpl
-from .idp_db import IDPDatabase
+from .instrument_data_parser_db import IDPDatabase
 from .instrument_data_parser_plotter import InstrumentDataParserPlotter
 
 class IDPOutputer:
