@@ -46,7 +46,7 @@ def main():
             image_df = image_df.drop('JPEGThumbnail', axis=1)
         
         # Save to CSV and create visualizations
-        outputer.save_to_csv(image_df, 'el_image_data.csv', dataset_type='el')
+        # outputer.save_to_csv(image_df, 'el_image_data.csv', dataset_type='el')
         print("\nCreating visualizations for image metadata...")
         outputer.create_summary_plots(image_df, 'el_image', dataset_type='el')
     else:
@@ -60,7 +60,7 @@ def main():
         print(f"Sinton metadata shape: {sinton_df.shape}")
         
         # Save to CSV and create visualizations
-        outputer.save_to_csv(sinton_df, 'sinton_metadata.csv', dataset_type='sinton')
+        # outputer.save_to_csv(sinton_df, 'sinton_metadata.csv', dataset_type='sinton')
         print("\nCreating visualizations for Sinton metadata...")
         outputer.create_summary_plots(sinton_df, 'sinton', dataset_type='sinton')
     else:
