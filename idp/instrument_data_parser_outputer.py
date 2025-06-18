@@ -76,6 +76,17 @@ class InstrumentDataParserOutputer:
         base, ext = os.path.splitext(base_filename)
         return f"{base}_{self.timestamp}{ext}"
 
+    def create_summary_plots(self, df, filename_prefix, dataset_type):
+        """Create all available plots for the dataframe using the plotter"""
+        self.plotter.create_summary_plots(df, filename_prefix, dataset_type)
+
+    def get_dataframe(self, dataset_type):
+        """Get the stored DataFrame for a dataset type"""
+        return self.dataframes.get(dataset_type)
+
+    def get_plots(self, dataset_type, plot_type=None):
+        """Get stored plots for a dataset type and optionally specific plot type from the plotter"""
+        return self.plotter.get_plots(dataset_type, plot_type)
 
 # def save_to_csv(self, df, filename, dataset_type):
 #     """Save a DataFrame to a CSV file and store it in the class"""
@@ -135,14 +146,4 @@ class InstrumentDataParserOutputer:
 #             else:
 #                 raise Exception(f"Failed to save CSV after {max_retries} attempts: {str(e)}")
 
-    def create_summary_plots(self, df, filename_prefix, dataset_type):
-        """Create all available plots for the dataframe using the plotter"""
-        self.plotter.create_summary_plots(df, filename_prefix, dataset_type)
 
-    def get_dataframe(self, dataset_type):
-        """Get the stored DataFrame for a dataset type"""
-        return self.dataframes.get(dataset_type)
-
-    def get_plots(self, dataset_type, plot_type=None):
-        """Get stored plots for a dataset type and optionally specific plot type from the plotter"""
-        return self.plotter.get_plots(dataset_type, plot_type)

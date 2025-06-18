@@ -2,24 +2,42 @@
 """
 Created on Wed Feb 19 17:51:57 2025
 
-@author: Doing
+@author: Brent Thompson
 """
 
 import pandas as pd
 import sqlite3 as sq
-import os
-from utils import create_logger
+import logging
 
-# Configuration
-DATABASE_PATH = os.getenv("DATABASE_PATH", "C:/Users/Doing/University of Central Florida/UCF_Photovoltaics_GRP - module_databases/FSEC_Database.db")
-
-# Initialize logger
-logger = create_logger()
 
 class SQLiteDB:
-    def __init__(self, database_path=DATABASE_PATH):
+    def __init__(self, database_path):
         self.database_path = database_path
+        self.logger = self.create_logger()
+    
+    def create_logger(self):
+        """
+        Set up and configure a logger to track errors and system events.
 
+        Returns:
+        logging.Logger: Configured logger object.
+        """
+        logger = logging.getLogger(__name__)
+        logger.setLevel(logging.INFO)
+        
+        log_name = self.database_path.replace("db", "log")
+        
+        file_handler = logging.FileHandler(log_name)
+        file_handler.setLevel(logging.DEBUG)
+
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        file_handler.setFormatter(formatter)
+        if not logger.handlers:
+            logger.addHandler(file_handler)
+        logger.info("Database log program started.")
+
+        return logger
+    
     def handle_error(self, error, context):
         """
         Handle errors by logging them.
@@ -28,7 +46,7 @@ class SQLiteDB:
         error (Exception): The exception that was raised.
         context (str): A description of the context in which the error occurred.
         """
-        logger.error("Error in %s: %s", context, str(error))
+        self.logger.error("Error in %s: %s", context, str(error))
 
     def read_records(self, table_name, select='*', conditions=None):
         """
@@ -44,11 +62,11 @@ class SQLiteDB:
         """
         try:
             with sq.connect(self.database_path) as connection:
-                sql = f"SELECT {select} FROM {table_name}"
+                sql = f'SELECT {select} FROM "{table_name}"'
                 if conditions:
                     sql += f" {conditions}"
                 records = pd.read_sql_query(sql, connection)
-                return records
+                return records.iloc[::-1].reset_index(drop=True) # Reverse
         except Exception as e:
             self.handle_error(e, "reading records from table")
             return None
@@ -67,7 +85,8 @@ class SQLiteDB:
                 
         except Exception as e:
             self.handle_error(e, "inserting data into table")
-
+            pass
+        
     def create_sqlite_record(self, table_name, columns, values):
         """
         Insert a single new entry to the database.
@@ -88,7 +107,7 @@ class SQLiteDB:
                 sql = f"INSERT INTO {table_name} ({columns_str}) VALUES ({values_str})"
                 cursor.execute(sql)
                 connection.commit()
-                logger.info("Records inserted successfully into table %s", table_name)
+                self.logger.info("Records inserted successfully into table %s", table_name)
                 return "Entry added to " + table_name
             
         except Exception as e:
@@ -115,7 +134,7 @@ class SQLiteDB:
                     cursor = connection.cursor()
                     cursor.execute(sql)
                     connection.commit()
-                logger.info("Records inserted successfully into table %s", table_name)
+                self.logger.info("Records inserted successfully into table %s", table_name)
             return f"{table_name} updated with {len(dataframe)} entries."
         except Exception as e:
             self.handle_error(e, "creating SQLite records from dataframe")
@@ -165,7 +184,10 @@ class SQLiteDB:
         except Exception as e:
             self.handle_error(e, "getting last date from table")
             return None
-
+        
+        def run_query(self, query: str) -> pd.DataFrame:
+            with sq.connect(self.database_path) as conn:
+                return pd.read_sql_query(query, conn)
 # Example usage:
-# db = SQLiteDB()
-# db.read_records("table_name")
+# db = SQLiteDB("C:/Users/Doing/University of Central Florida/UCF_Photovoltaics_GRP - module_databases/Complete_Dataset.db")
+# db.read_records("module-metadata")
