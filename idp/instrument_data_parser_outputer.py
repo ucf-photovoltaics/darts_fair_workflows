@@ -6,7 +6,7 @@ from datetime import datetime
 import numpy as np
 import time
 import matplotlib as mpl
-from .instrument_data_parser_db import IDPDatabase
+from scripts.sqlite_operations import SQLiteDB
 from .instrument_data_parser_plotter import InstrumentDataParserPlotter
 
 class IDPOutputer:
@@ -49,7 +49,7 @@ class IDPOutputer:
         # Setup database path
         db_path = os.path.join(self.output_dir, 'database', 'instrument_data.db')
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
-        self.db = IDPDatabase(db_path)
+        self.db = SQLiteDB(database_path=db_path)
         # Initialize plotter
         self.plotter = InstrumentDataParserPlotter(self.output_dir, self.timestamp, self.dataset_dirs)
 
