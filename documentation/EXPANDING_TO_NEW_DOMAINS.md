@@ -12,7 +12,11 @@ The workflow is made up of four main parts:
 - **SQLiteDB**: Manages all database operations.
 - **Plotter**: (Optional) Makes visualizations from your data.
 
-See the diagram in `documentation/Expanding_to_New_Domains.svg` for a visual overview.
+See the diagram below, (`documentation/Expanding_to_New_Domains.svg`) for a visual overview.
+
+<div align="center">
+  <img src="Expanding_to_New_Domains.svg" width="500px" alt="Instrument Data Parser Workflow Overview"/>
+</div>
 
 ---
 
@@ -119,8 +123,9 @@ outputer.create_summary_plots(my_df, 'mydata', dataset_type='mydata')
 ## 3. Visual Diagram
 
 A D2 diagram visualizing the workflow is shown below and in `documentation/Expanding_to_New_Domains.svg`. The diagram applies to both approaches: whether you make a new class or just add new functions, the flow is the same.
-![Instrument_Data_Parser_Workflow](https://github.com/user-attachments/assets/b19ce406-c827-481e-8141-3ee2cd598a8f)
-
+<div align="center">
+  <img src="Instrument_Data_Parser_Workflow.svg" width="500px" alt="Instrument Data Parser Workflow Overview"/>
+</div>
 
 ---
 
