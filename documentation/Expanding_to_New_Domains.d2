@@ -1,0 +1,15 @@
+direction: down
+
+NewRawData: "New Raw Data"
+CustomParser: "CustomDataParser (Your New Class)"
+CustomOutputer: "CustomDataParserOutputer (Your Output/DB/Plot Class)"
+SQLiteDB: "SQLiteDB (from scripts/sqlite_operations.py)"
+Plots: "Output/Plots"
+Database: "SQLite Database"
+
+NewRawData -> CustomParser: "raw data folder, config, etc."
+CustomParser -> CustomOutputer: "metadata, DataFrames"
+CustomOutputer -> SQLiteDB: "delegates DB operations"
+CustomOutputer -> Plots: "delegates plotting"
+SQLiteDB -> Database: "SQL operations"
+CustomOutputer -> NewRawData: "summary, plots, DB access" 
