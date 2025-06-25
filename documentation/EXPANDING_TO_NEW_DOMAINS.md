@@ -12,11 +12,11 @@ The workflow is made up of four main parts:
 - **SQLiteDB**: Manages all database operations.
 - **Plotter**: (Optional) Makes visualizations from your data.
 
-See the diagram in `documentation/Expanding_to_New_Domains.d2` for a visual overview.
+See the diagram in `documentation/Expanding_to_New_Domains.svg` for a visual overview.
 
 ---
 
-## 2. Step-by-Step: Creating Your Own Data Parser
+## 2A. Option 1: Creating Your Own Data Parser Class
 
 ### Step 1: Copy and Rename the Parser Class
 - Copy `idp/instrument_data_parser_oo.py` to a new file, e.g. `idp/my_custom_parser.py`.
@@ -35,7 +35,7 @@ class MyCustomParser:
 ```
 
 ### Step 2: Connect to the Outputer
-- Use or subclass `InstrumentDataParserOutputer` (see `idp/instrument_data_parser_outputer.py`).
+- Use or make a subclass of `InstrumentDataParserOutputer` (see `idp/instrument_data_parser_outputer.py`).
 - Pass your DataFrame(s) to the outputer for saving, plotting, and database storage.
 
 **Example:**
@@ -71,9 +71,56 @@ df = db.read_records('my_custom_table')
 
 ---
 
+## 2B. Option 2: Extending the Existing Parser Class with New Functions
+
+Instead of making a new class, you can simply add new functions to the existing `InstrumentDataParser` class. This keeps all parsing logic in one place and is often easier for beginners.
+
+### Step 1: Open the Existing Parser
+- Open `idp/instrument_data_parser_oo.py`.
+
+### Step 2: Add Your New Function
+- Add a new method for your data type. For example:
+
+```python
+def parse_my_new_data(self):
+    # Your code to read/process your new data type
+    return metadata_list, failed_files
+```
+
+### Step 3: Use Your New Function in Your Script
+- In your test or main script, call your new function:
+
+```python
+parser = InstrumentDataParser(folder_locations, sqlite_file_path)
+my_metadata, failed_files = parser.parse_my_new_data()
+```
+
+- Then pass the results to the outputer as before:
+
+```python
+outputer.save_to_db(my_df, dataset_type='mydata')
+outputer.create_summary_plots(my_df, 'mydata', dataset_type='mydata')
+```
+
+---
+
+## 2C. Which Approach Should I Use?
+
+- **New Class:**
+  - Best if your data is very different or you want to keep things separate.
+  - Good for advanced users or large projects.
+- **Add Functions:**
+  - Easiest for beginners.
+  - Keeps all parsing in one file/class.
+  - Great for incremental additions.
+
+---
+
 ## 3. Visual Diagram
 
-A D2 diagram showing the workflow is in `documentation/Expanding_to_New_Domains.d2`. You can view it as a SVG or edit it with any D2-compatible tool.
+A D2 diagram visualizing the workflow is shown below and in `documentation/Expanding_to_New_Domains.svg`. The diagram applies to both approaches: whether you make a new class or just add new functions, the flow is the same.
+![Instrument_Data_Parser_Workflow](https://github.com/user-attachments/assets/b19ce406-c827-481e-8141-3ee2cd598a8f)
+
 
 ---
 
@@ -83,13 +130,6 @@ A D2 diagram showing the workflow is in `documentation/Expanding_to_New_Domains.
 - If you get database errors, check that your DataFrame columns match your table schema.
 - Use the retry logic in the outputer for robust saving.
 - Ask for help or check the README if you get stuck!
-
----
-
-## 5. Additional Resources
-- See the original `test_instrument_parser.py` for a full example.
-- The `README.md` has more details on setup and requirements.
-- The D2 diagram is a great way to explain your workflow to collaborators.
 
 ---
 
