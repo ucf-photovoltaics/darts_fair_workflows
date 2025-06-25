@@ -49,6 +49,9 @@ def main():
         # outputer.save_to_csv(image_df, 'el_image_data.csv', dataset_type='el')
         print("\nCreating visualizations for image metadata...")
         outputer.create_summary_plots(image_df, 'el_image', dataset_type='el')
+        # Save to database
+        print("\nSaving image metadata to database...")
+        outputer.save_to_db(image_df, dataset_type='el')
     else:
         print("\nNo image metadata found")
         image_df = pd.DataFrame()
@@ -63,6 +66,9 @@ def main():
         # outputer.save_to_csv(sinton_df, 'sinton_metadata.csv', dataset_type='sinton')
         print("\nCreating visualizations for Sinton metadata...")
         outputer.create_summary_plots(sinton_df, 'sinton', dataset_type='sinton')
+        # Save to database
+        print("\nSaving Sinton metadata to database...")
+        outputer.save_to_db(sinton_df, dataset_type='sinton')
     else:
         print("No Sinton metadata found")
         sinton_df = pd.DataFrame()

@@ -76,6 +76,42 @@ class InstrumentDataParserOutputer:
         base, ext = os.path.splitext(base_filename)
         return f"{base}_{self.timestamp}{ext}"
 
+    def create_summary_plots(self, df, filename_prefix, dataset_type):
+        """Create all available plots for the dataframe using the plotter"""
+        self.plotter.create_summary_plots(df, filename_prefix, dataset_type)
+
+    def get_dataframe(self, dataset_type):
+        """Get the stored DataFrame for a dataset type"""
+        return self.dataframes.get(dataset_type)
+
+    def get_plots(self, dataset_type, plot_type=None):
+        """Get stored plots for a dataset type and optionally specific plot type from the plotter"""
+        return self.plotter.get_plots(dataset_type, plot_type)
+
+    def save_to_db(self, df, dataset_type, table_name=None):
+        """Save a DataFrame to the SQLite database with retry logic and store it in the class."""
+        # Store the DataFrame
+        self.dataframes[dataset_type] = df.copy()
+
+        # Determine table name if not provided
+        if table_name is None:
+            table_name = 'el_image_data' if dataset_type == 'el' else 'sinton_metadata'
+
+        # Retry settings for DB operations
+        max_retries = 3
+        retry_delay = 10  # seconds
+
+        for attempt in range(max_retries):
+            try:
+                result = self.db.create_sqlite_records_from_dataframe(table_name, df)
+                print(f"Data saved to database table '{table_name}': {result}")
+                return
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    print(f"Error saving to database. Retrying in {retry_delay} seconds... Error: {str(e)}")
+                    time.sleep(retry_delay)
+                else:
+                    raise Exception(f"Failed to save to database after {max_retries} attempts: {str(e)}")
 
 # def save_to_csv(self, df, filename, dataset_type):
 #     """Save a DataFrame to a CSV file and store it in the class"""
@@ -134,15 +170,3 @@ class InstrumentDataParserOutputer:
 #                 time.sleep(retry_delay)
 #             else:
 #                 raise Exception(f"Failed to save CSV after {max_retries} attempts: {str(e)}")
-
-    def create_summary_plots(self, df, filename_prefix, dataset_type):
-        """Create all available plots for the dataframe using the plotter"""
-        self.plotter.create_summary_plots(df, filename_prefix, dataset_type)
-
-    def get_dataframe(self, dataset_type):
-        """Get the stored DataFrame for a dataset type"""
-        return self.dataframes.get(dataset_type)
-
-    def get_plots(self, dataset_type, plot_type=None):
-        """Get stored plots for a dataset type and optionally specific plot type from the plotter"""
-        return self.plotter.get_plots(dataset_type, plot_type)
