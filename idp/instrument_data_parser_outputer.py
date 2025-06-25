@@ -88,6 +88,31 @@ class InstrumentDataParserOutputer:
         """Get stored plots for a dataset type and optionally specific plot type from the plotter"""
         return self.plotter.get_plots(dataset_type, plot_type)
 
+    def save_to_db(self, df, dataset_type, table_name=None):
+        """Save a DataFrame to the SQLite database with retry logic and store it in the class."""
+        # Store the DataFrame
+        self.dataframes[dataset_type] = df.copy()
+
+        # Determine table name if not provided
+        if table_name is None:
+            table_name = 'el_image_data' if dataset_type == 'el' else 'sinton_metadata'
+
+        # Retry settings for DB operations
+        max_retries = 3
+        retry_delay = 10  # seconds
+
+        for attempt in range(max_retries):
+            try:
+                result = self.db.create_sqlite_records_from_dataframe(table_name, df)
+                print(f"Data saved to database table '{table_name}': {result}")
+                return
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    print(f"Error saving to database. Retrying in {retry_delay} seconds... Error: {str(e)}")
+                    time.sleep(retry_delay)
+                else:
+                    raise Exception(f"Failed to save to database after {max_retries} attempts: {str(e)}")
+
 # def save_to_csv(self, df, filename, dataset_type):
 #     """Save a DataFrame to a CSV file and store it in the class"""
 #     # Store the DataFrame
@@ -145,5 +170,3 @@ class InstrumentDataParserOutputer:
 #                 time.sleep(retry_delay)
 #             else:
 #                 raise Exception(f"Failed to save CSV after {max_retries} attempts: {str(e)}")
-
-
